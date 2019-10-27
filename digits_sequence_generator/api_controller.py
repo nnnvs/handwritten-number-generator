@@ -8,16 +8,20 @@ import logging
 
 app = Flask(__name__)
 
+
 def initialize_app():
     generator.set_logger()
     generator.init()
 
+
 initialize_app()
 utility = Util()
+
 
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({'Status': 'Running'})
+
 
 @app.route('/generate', methods=['POST', 'PUT'])
 def generate():
@@ -47,13 +51,12 @@ def generate():
         except Exception:
             stack_trace = traceback.format_exc()
             logger.info('[Task Id: ' + str(task_id) + ']. Digit Augmentor Failed. \n'+stack_trace)
-            response = jsonify({'TaskId': task_id,
-                                'requestBody': request.json,
-                                'status': stack_trace})
+            response = jsonify({'TaskId': task_id, 'requestBody': request.json, 'status': stack_trace})
             return response, 500
     else:
         return "Request content type should be application/json.", 400
 
-#Added for local testing
+
+# Added for local testing
 if __name__ == "__main__":
-   app.run()
+    app.run()

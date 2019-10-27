@@ -2,6 +2,7 @@ import yaml
 from datetime import datetime
 import os
 
+
 class Util:
 
     def read_config(self):
@@ -11,7 +12,7 @@ class Util:
             self.config = yaml.safe_load(ymlfile)
         return self.config
 
-    """Unique identifier for each task request received by the API"""
+    """Unique identifier for each task/request received by the API"""
     def create_task_id(self):
         task_id = str(datetime.now().time())
         remove_chars = ".:"
@@ -19,6 +20,7 @@ class Util:
             task_id = task_id.replace(char,"")
         return task_id
 
+    """Fetch path for config key"""
     def get_path(self,config_key):
         dir_path = os.path.dirname(os.path.realpath(__file__))
         data_folder_path = os.path.join(dir_path,"../")

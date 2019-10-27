@@ -8,6 +8,7 @@ from digits_sequence_generator.generator import image_generator
 mnist_features = []
 mnist_labels = []
 
+
 def init():
     global mnist_features
     global mnist_labels
@@ -18,8 +19,10 @@ def init():
     logger = logging.getLogger('digits-seq-generator')
     logger.info('starting web-service')
 
+
 def get_mnist_data():
     return mnist_features, mnist_labels
+
 
 def set_logger(logging_level=logging.DEBUG):
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -36,8 +39,17 @@ def set_logger(logging_level=logging.DEBUG):
     str_handler.setLevel(level=logging_level)
     logger.addHandler(str_handler)
 
-"""The function below exists for direct use. Doesn't require task_id. Always augments images, if not mentioned otherwise"""
-def generate_numbers_sequence(digits, spacing_range, image_width,augment_flag="true"):
+
+"""The function below exists for direct use. Doesn't require task_id. 
+Always augments images, if not mentioned otherwise"""
+def generate_numbers_sequence(digits, spacing_range, image_width, augment_flag=None):
+    if augment_flag is None:
+        augment_flag = "true"
+    elif augment_flag.lower() == "false":
+        augment_flag = "false"
+    else:
+        augment_flag = "true"
+
     set_logger(logging.WARNING)
     init()
     digits_str = [str(i) for i in digits]

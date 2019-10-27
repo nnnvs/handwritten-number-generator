@@ -652,3 +652,86 @@ FileNotFoundError: [Errno 2] No such file or directory: '/Users/niksharm/.virtua
 [2019-10-27 16:06:53 +0530] [44955] [INFO] Booting worker with pid: 44955
 [2019-10-27 16:06:53 +0530] [44956] [INFO] Booting worker with pid: 44956
 [2019-10-27 16:06:53 +0530] [43789] [DEBUG] 4 workers
+[2019-10-27 16:43:33 +0530] [44953] [INFO] Worker reloading: /Users/niksharm/Downloads/digit-sequence-generator/digits_sequence_generator/api_controller.py modified
+[2019-10-27 16:43:33 +0530] [44955] [INFO] Worker reloading: /Users/niksharm/Downloads/digit-sequence-generator/digits_sequence_generator/api_controller.py modified
+[2019-10-27 16:43:33 +0530] [44954] [INFO] Worker reloading: /Users/niksharm/Downloads/digit-sequence-generator/digits_sequence_generator/api_controller.py modified
+[2019-10-27 16:43:33 +0530] [44956] [INFO] Worker reloading: /Users/niksharm/Downloads/digit-sequence-generator/digits_sequence_generator/api_controller.py modified
+[2019-10-27 16:43:34 +0530] [44953] [INFO] Worker exiting (pid: 44953)
+[2019-10-27 16:43:34 +0530] [44954] [INFO] Worker exiting (pid: 44954)
+[2019-10-27 16:43:34 +0530] [44956] [INFO] Worker exiting (pid: 44956)
+[2019-10-27 16:43:34 +0530] [44955] [INFO] Worker exiting (pid: 44955)
+[2019-10-27 16:43:34 +0530] [47349] [INFO] Booting worker with pid: 47349
+[2019-10-27 16:43:34 +0530] [47350] [INFO] Booting worker with pid: 47350
+[2019-10-27 16:43:34 +0530] [43789] [DEBUG] 2 workers
+[2019-10-27 16:43:34 +0530] [47351] [INFO] Booting worker with pid: 47351
+[2019-10-27 16:43:35 +0530] [47352] [INFO] Booting worker with pid: 47352
+[2019-10-27 16:43:35 +0530] [43789] [DEBUG] 4 workers
+[2019-10-27 16:53:45 +0530] [47350] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:53:45 +0530] [47349] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:53:45 +0530] [47351] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:53:45 +0530] [47352] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:53:45 +0530] [47351] [INFO] Worker exiting (pid: 47351)
+[2019-10-27 16:53:45 +0530] [47350] [INFO] Worker exiting (pid: 47350)
+[2019-10-27 16:53:45 +0530] [47352] [INFO] Worker exiting (pid: 47352)
+[2019-10-27 16:53:45 +0530] [47349] [INFO] Worker exiting (pid: 47349)
+[2019-10-27 16:53:46 +0530] [48336] [INFO] Booting worker with pid: 48336
+[2019-10-27 16:53:46 +0530] [48337] [INFO] Booting worker with pid: 48337
+[2019-10-27 16:53:46 +0530] [48338] [INFO] Booting worker with pid: 48338
+[2019-10-27 16:53:46 +0530] [48339] [INFO] Booting worker with pid: 48339
+[2019-10-27 16:57:33 +0530] [48339] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:57:33 +0530] [48337] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:57:33 +0530] [48338] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:57:33 +0530] [48336] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:57:34 +0530] [48339] [INFO] Worker exiting (pid: 48339)
+[2019-10-27 16:57:34 +0530] [48336] [INFO] Worker exiting (pid: 48336)
+[2019-10-27 16:57:34 +0530] [48338] [INFO] Worker exiting (pid: 48338)
+[2019-10-27 16:57:34 +0530] [48337] [INFO] Worker exiting (pid: 48337)
+[2019-10-27 16:57:35 +0530] [48688] [INFO] Booting worker with pid: 48688
+[2019-10-27 16:57:35 +0530] [43789] [DEBUG] 1 workers
+[2019-10-27 16:57:35 +0530] [48689] [INFO] Booting worker with pid: 48689
+[2019-10-27 16:57:35 +0530] [48690] [INFO] Booting worker with pid: 48690
+[2019-10-27 16:57:35 +0530] [48691] [INFO] Booting worker with pid: 48691
+[2019-10-27 16:57:35 +0530] [43789] [DEBUG] 4 workers
+[2019-10-27 16:59:53 +0530] [48691] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:59:53 +0530] [48688] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:59:53 +0530] [48689] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:59:53 +0530] [48690] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 16:59:54 +0530] [48691] [INFO] Worker exiting (pid: 48691)
+[2019-10-27 16:59:54 +0530] [48688] [INFO] Worker exiting (pid: 48688)
+[2019-10-27 16:59:54 +0530] [48689] [INFO] Worker exiting (pid: 48689)
+[2019-10-27 16:59:54 +0530] [48690] [INFO] Worker exiting (pid: 48690)
+[2019-10-27 16:59:54 +0530] [48972] [INFO] Booting worker with pid: 48972
+[2019-10-27 16:59:54 +0530] [43789] [DEBUG] 3 workers
+[2019-10-27 16:59:54 +0530] [48973] [INFO] Booting worker with pid: 48973
+[2019-10-27 16:59:54 +0530] [48974] [INFO] Booting worker with pid: 48974
+[2019-10-27 16:59:54 +0530] [48975] [INFO] Booting worker with pid: 48975
+[2019-10-27 16:59:54 +0530] [43789] [DEBUG] 4 workers
+[2019-10-27 17:00:26 +0530] [48972] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 17:00:26 +0530] [48975] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 17:00:26 +0530] [48974] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 17:00:26 +0530] [48973] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 17:00:27 +0530] [48972] [INFO] Worker exiting (pid: 48972)
+[2019-10-27 17:00:27 +0530] [48974] [INFO] Worker exiting (pid: 48974)
+[2019-10-27 17:00:27 +0530] [48975] [INFO] Worker exiting (pid: 48975)
+[2019-10-27 17:00:27 +0530] [48973] [INFO] Worker exiting (pid: 48973)
+[2019-10-27 17:00:27 +0530] [49194] [INFO] Booting worker with pid: 49194
+[2019-10-27 17:00:27 +0530] [43789] [DEBUG] 1 workers
+[2019-10-27 17:00:27 +0530] [49195] [INFO] Booting worker with pid: 49195
+[2019-10-27 17:00:27 +0530] [49196] [INFO] Booting worker with pid: 49196
+[2019-10-27 17:00:27 +0530] [49197] [INFO] Booting worker with pid: 49197
+[2019-10-27 17:00:27 +0530] [43789] [DEBUG] 4 workers
+[2019-10-27 17:01:49 +0530] [49194] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 17:01:49 +0530] [49197] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 17:01:49 +0530] [49195] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 17:01:49 +0530] [49196] [INFO] Worker reloading: /Users/niksharm/anaconda3/lib/python3.6/site-packages/digits_sequence_generator/__init__.py modified
+[2019-10-27 17:01:50 +0530] [49197] [INFO] Worker exiting (pid: 49197)
+[2019-10-27 17:01:50 +0530] [49194] [INFO] Worker exiting (pid: 49194)
+[2019-10-27 17:01:50 +0530] [49195] [INFO] Worker exiting (pid: 49195)
+[2019-10-27 17:01:50 +0530] [49196] [INFO] Worker exiting (pid: 49196)
+[2019-10-27 17:01:50 +0530] [49618] [INFO] Booting worker with pid: 49618
+[2019-10-27 17:01:50 +0530] [49619] [INFO] Booting worker with pid: 49619
+[2019-10-27 17:01:50 +0530] [43789] [DEBUG] 2 workers
+[2019-10-27 17:01:50 +0530] [49620] [INFO] Booting worker with pid: 49620
+[2019-10-27 17:01:51 +0530] [49621] [INFO] Booting worker with pid: 49621
+[2019-10-27 17:01:51 +0530] [43789] [DEBUG] 4 workers
+[2019-10-27 17:20:56 +0530] [49619] [DEBUG] POST /generate
