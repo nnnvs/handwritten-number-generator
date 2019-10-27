@@ -1,0 +1,13 @@
+# Include the README
+include *.md
+include *.txt
+
+# include code
+include digits_sequence_generator/*
+
+include scripts/*
+include docker/*
+
+# Include the data files
+include digits_sequence_generator/data/compressed/*
+include digits_sequence_generator/config/config.yml
