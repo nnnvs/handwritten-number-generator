@@ -71,6 +71,3 @@ def test_pckg_generated_image_dtype():
 
     generated_image = generator.generate_numbers_sequence(digits=[4,2], spacing_range=(5,10), image_width=56)
     assert generated_image.dtype == np.dtype('float32')
-
-
-

@@ -1,8 +1,6 @@
 import logging
 import os
-
-# import digits_sequence_generator.data_handler.download_mnist as download_mnist
-# import digits_sequence_generator.data_handler.pre_processing as pre_processing
+import numpy as np
 from digits_sequence_generator.data_handler import download_mnist
 from digits_sequence_generator.data_handler import pre_processing
 from digits_sequence_generator.generator import image_generator
@@ -23,6 +21,8 @@ def init():
 
 
 def get_mnist_data():
+    if np.shape(mnist_features) == (0,):
+        init()
     return mnist_features, mnist_labels
 
 

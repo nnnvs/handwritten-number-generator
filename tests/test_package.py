@@ -14,3 +14,7 @@ def test_generator_incompatible_type():
 def test_generator_null_check():
     with pytest.raises(ValueError):
         generated_image = generator.generate_numbers_sequence(digits=None, spacing_range=None, image_width=None)
+
+def test_generator_negative_numbers():
+    with pytest.raises(ValueError):
+        generated_image = generator.generate_numbers_sequence(digits=[4,-2], spacing_range=(5,-10), image_width=-56)

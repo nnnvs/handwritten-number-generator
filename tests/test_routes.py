@@ -11,7 +11,7 @@ def test_health():
     assert response.status_code == 200
 
 
-def test_post_success():
+def test_post_success_with_augment():
     app = api_controller.app
     client = app.test_client()
     url = '/generate'
@@ -23,6 +23,27 @@ def test_post_success():
 
     mock_request_data = {
         "augment": "true",
+        "number": 1234567890,
+        "spacing_min": 5,
+        "spacing_max": 10,
+        "image_width": 300
+    }
+
+    response = client.post(url, json=mock_request_data, headers=mock_request_headers)
+    assert response.status_code == 200
+
+def test_post_success_without_augment():
+    app = api_controller.app
+    client = app.test_client()
+    url = '/generate'
+
+    mock_request_headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    }
+
+    mock_request_data = {
+        "augment": "false",
         "number": 1234567890,
         "spacing_min": 5,
         "spacing_max": 10,
