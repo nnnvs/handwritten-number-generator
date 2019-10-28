@@ -17,14 +17,5 @@ setup(name='digits_sequence_generator',
       author='Nikhil Vinay Sharma',
       author_email='nikhilvs999@gmail.com',
       packages=find_packages(),
-      # install_requires=[
-      #     'markdown',
-      # ],
-      # test_suite='nose.collector',
-      # tests_require=['nose', 'nose-cover3'],
-      # entry_points={
-      #     'console_scripts': ['funniest-joke=funniest.command_line:main'],
-      # },
       include_package_data=True,
-      # zip_safe=False
       )

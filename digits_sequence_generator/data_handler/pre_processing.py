@@ -17,7 +17,7 @@ class PreProcessing:
         with open(file_path, 'rb') as file:
             zero, data_type, dims = st.unpack('>HBB', file.read(4))
             shape = tuple(st.unpack('>I', file.read(4))[0] for d in range(dims))
-            return np.fromstring(file.read(), dtype=np.uint8).reshape(shape)
+            return np.frombuffer(file.read(), dtype=np.uint8).reshape(shape)
 
     def normalize_mnist(self, mnist):
         mnist = mnist.astype('float32') / 255

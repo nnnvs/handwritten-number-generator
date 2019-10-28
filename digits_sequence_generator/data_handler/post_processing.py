@@ -22,50 +22,50 @@ class PostProcessing:
 
 
     def find_right_most_non_black_column(self, np_array):
-        nrows,ncols = np.shape(np_array) # should be 28x28
+        nrows, ncols = np.shape(np_array) # should be 28x28
         right_most_non_black_col = ncols-1
-        for col in range(ncols-1,-1,-1):
-            if(np.mean(np_array[:,col])!=0):
-                right_most_non_black_col=col
-                break;
+        for col in range(ncols-1, -1, -1):
+            if np.mean(np_array[:,col]) != 0:
+                right_most_non_black_col = col
+                break
         return right_most_non_black_col
 
     def find_left_most_non_black_column(self, np_array):
-        nrows,ncols = np.shape(np_array) # should be 28x28
+        nrows, ncols = np.shape(np_array)  # should be 28x28
         left_most_non_black_column = 0
-        for col in range(0,ncols):
-            if(np.mean(np_array[:,col])!=0):
-                left_most_non_black_column=col
-                break;
+        for col in range(0, ncols):
+            if np.mean(np_array[:, col]) != 0:
+                left_most_non_black_column = col
+                break
         return left_most_non_black_column
 
     def delete_black_space_from_image(self, np_array):
-        nrows,ncols = np.shape(np_array) # should be 28x28
+        nrows,ncols = np.shape(np_array)  # should be 28x28
         right_limit = self.find_right_most_non_black_column(np_array)+1
         left_limit = self.find_left_most_non_black_column(np_array)-1
 
-        np_array = np.delete(np_array, np.s_[right_limit:(ncols-1)+1], 1) #adding +1 to upper limit of np.s_ slice for complete deletion of black area
+        np_array = np.delete(np_array, np.s_[right_limit:(ncols-1)+1], 1)  # adding +1 to upper limit of np.s_ slice for complete deletion of black area
         np_array = np.delete(np_array, np.s_[0:left_limit+1], 1)
         return np_array
 
     def create_spacing_array(self, spacing_min, spacing_max):
-        random_number = int(random.uniform(spacing_min,spacing_max))
+        random_number = int(random.uniform(spacing_min, spacing_max))
         return np.zeros([28,random_number])
 
     def stitch_arrays(self, cropped_arrays):
         stitched_array = cropped_arrays[0]
         for index in range(1, len(cropped_arrays)):
             spacing_array = self.create_spacing_array(self.spacing_min, self.spacing_max)
-            stitched_array = np.concatenate((stitched_array, spacing_array, cropped_arrays[index]),axis = 1)
+            stitched_array = np.concatenate((stitched_array, spacing_array, cropped_arrays[index]), axis=1)
         return stitched_array
 
     def add_padding(self, image_normalized):
         spacing_array = np.zeros([28,4])
-        image_normalized = np.concatenate((spacing_array, image_normalized, spacing_array),axis = 1)
+        image_normalized = np.concatenate((spacing_array, image_normalized, spacing_array), axis=1)
         return image_normalized
 
     def stretch_image(self, numpy_array):
-        image = Image.fromarray(np.uint8(numpy_array * 255) , 'L')
+        image = Image.fromarray(np.uint8(numpy_array * 255), 'L')
         image_resized = image.resize((self.image_width, 28))
         return image_resized
 
@@ -92,5 +92,5 @@ class PostProcessing:
         image_normalized = self.normalize_image(image_resized)
         self.store_image(image_normalized)
 
-        return image_normalized
+        return image_normalized.astype('float32')
 

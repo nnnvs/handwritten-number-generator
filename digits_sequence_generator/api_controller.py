@@ -29,23 +29,27 @@ def generate():
     if request.headers['Content-Type'] == 'application/json':
         task_id = None
         try:
-            task_id = utility.create_task_id()
-            augment_flag = request.json["augment"]
-            number = request.json["number"]
-            spacing_min = request.json["spacing_min"]
-            spacing_max = request.json["spacing_max"]
-            image_width = request.json["image_width"]
+            if all(key in request.json.keys() for key in ["augment", "number", "spacing_min", "spacing_max", "image_width"]):
+                task_id = utility.create_task_id()
+                augment_flag = request.json["augment"]
+                number = request.json["number"]
+                spacing_min = request.json["spacing_min"]
+                spacing_max = request.json["spacing_max"]
+                image_width = request.json["image_width"]
 
-            if None not in (task_id, number, spacing_min, spacing_max, image_width):
-                logger.info('[Task Id: ' + str(task_id) + ']. Generation request data: ' + str(request.json))
-                image_gen = ImageGenerator(task_id, augment_flag, number, spacing_min, spacing_max, image_width)
-                request.json["generatedImage"] = image_gen.generate_digits_sequence().tolist()
-                request.json["taskId"] = task_id
-                logger.info('[Task Id: ' + str(task_id) + ']. Generation request completed.')
-                return jsonify(request.json)
+                if None not in (task_id, number, spacing_min, spacing_max, image_width):
+                    logger.info('[Task Id: ' + str(task_id) + ']. Generation request data: ' + str(request.json))
+                    image_gen = ImageGenerator(task_id, augment_flag, number, spacing_min, spacing_max, image_width)
+                    request.json["generatedImage"] = image_gen.generate_digits_sequence().tolist()
+                    request.json["taskId"] = task_id
+                    logger.info('[Task Id: ' + str(task_id) + ']. Generation request completed.')
+                    return jsonify(request.json)
+                else:
+                    logger.info('[Task Id: ' + str(task_id) + ']. Generation request received for empty features')
+                    response = jsonify({'TaskId': task_id, 'requestBody': request.json, 'status': 'Empty feature(s)'})
+                    return response, 400
             else:
-                logger.info('[Task Id: ' + str(task_id) + ']. Generation request received for empty features')
-                response = jsonify({'TaskId': task_id, 'requestBody': request.json, 'status': 'Empty feature(s)'})
+                response = jsonify({'requestBody': request.json, 'status': 'Request JSON incomplete'})
                 return response, 400
 
         except Exception:

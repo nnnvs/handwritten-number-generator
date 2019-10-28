@@ -13,7 +13,8 @@ from digits_sequence_generator.generator.util import Util
 
 logger = logging.getLogger('digits-seq-generator')
 
-class DownloadMnist():
+
+class DownloadMnist:
 
     def __init__(self):
         utility = Util()
@@ -21,14 +22,14 @@ class DownloadMnist():
         self.compressed_folder_path = utility.get_path("mnist_compressed_data_path")
         self.raw_folder_path = utility.get_path("mnist_raw_data_path")
 
-
-    def show_download_progress(self,chunk_number, chunk_size, file_size):
+    @staticmethod
+    def show_download_progress(chunk_number, chunk_size, file_size):
         if file_size != -1:
             percent = min(1, (chunk_number * chunk_size) / file_size)
             bar = '#' * int(64 * percent)
             sys.stdout.write('\r0% |{:<64}| {}%'.format(bar, int(percent * 100)))
 
-    def download_mnist_zip(self,resource):
+    def download_mnist_zip(self, resource):
         url = 'http://yann.lecun.com/exdb/mnist/{}'.format(resource)
         compressed_file_path = os.path.join(self.compressed_folder_path, resource)
         if os.path.exists(compressed_file_path):
@@ -41,7 +42,7 @@ class DownloadMnist():
             except URLError:
                 raise RuntimeError('Error downloading resource!')
 
-    def unzip_mnist(self,resource):
+    def unzip_mnist(self, resource):
         compressed_file_path = os.path.join(self.compressed_folder_path, resource)
         raw_file_path = os.path.splitext(os.path.join(self.raw_folder_path, resource))[0]
         if os.path.exists(raw_file_path):
