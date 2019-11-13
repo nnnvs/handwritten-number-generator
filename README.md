@@ -1,14 +1,14 @@
-# Digits Sequence Generator
+# Handwritten Number Generator
 
-The goal of this project is to write a program that can generate images
-representing sequences of numbers, for data augmentation purposes.
+The goal of this project is to write a program that can generates images of an input number
+for data training and augmentation purposes from MNIST-like Data.
 
 ## Installation
 
 Install the requirements in your python3 environment
 > pip install -r requirements.txt
 
-> "pip install digits_sequence_generator-1.0.0-py3-none-any.whl"  (present in dist/ folder)
+> "pip install handwritten-number-generator-1.0.0-py3-none-any.whl"  (present in dist/ folder)
 
 ## Solution
 
@@ -33,7 +33,7 @@ albumentations (a fast image augmentation library)
 
 General use
 ```
-from digits_sequence_generator import generator
+from handwritten_number_generator import generator
 import matplotlib.pyplot as plt
 %matplotlib inline
 
@@ -132,33 +132,6 @@ Output images are saved in both
 
 ## Testing
 pytest is used as testing framework. The tests can be run from project root by running the command "pytest"
-
-- test_download_mnist.py 
-  - tests the working of downloading MNIST data and making it available for use (covers pre_processing.py & download_mnist.py)
-    - confirms the files in the data/ folder
-    - confirms that MNIST data was preprocesse succesfully and is complete
-- test_generated_image.py
-  - tests the output generated image returned from flask webservice
-    - generated image dimensions should be 28 x image_width
-    - generated image should be normalized with pixel values between 0 to 1
-  - tests the output generated image returned from package function
-    - generated image dimensions should be 28 x image_width
-    - generated image should be normalized with pixel values between 0 to 1
-    - generated image dtype should be 'float32'
-- test_package.py
-  - tests the working of digits_sequence_generator package when imported as third party package
-  - tests  
-    - inputs are incompatible types
-    - inputs are empty data structures
-    - inputs are null
-    - inputs are negative numbers
-- test_routes.py
-  - tests the working of flask API
-    - confirms that endpoints work as they should
-    - confirms the service response in case of incomplete/malformed requests
-- test_util.py
-  - tests the working of util.py 
-    - namely the reading of config file
 
 ## Augmentations 
 Albumentations library was chosen as I've observed it to be faster library for augmentations, and is quite stable as well.
