@@ -3,6 +3,8 @@
 The goal of this project is to write a program that can generates images of an input number
 for data training and augmentation purposes from MNIST-like Data.
 
+![alt text](https://github.com/27pirateking/handwritten-number-generator/blob/master/handwritten_number_generator/data/processed_images/130348275688_1234567890.png "Ouptut Example")
+
 ## Installation
 
 Install the requirements in your python3 environment
