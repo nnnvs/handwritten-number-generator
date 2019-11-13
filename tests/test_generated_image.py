@@ -1,5 +1,5 @@
-from digits_sequence_generator import api_controller
-from digits_sequence_generator import generator
+from handwritten_number_generator import api_controller
+from handwritten_number_generator import generator
 import numpy as np
 
 def test_api_generated_image_dimensions():

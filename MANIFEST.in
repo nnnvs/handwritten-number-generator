@@ -3,11 +3,11 @@ include *.md
 include *.txt
 
 # include code
-include digits_sequence_generator/*
+include handwritten_number_generator/*
 
 include scripts/*
 include docker/*
 
 # Include the data files
-include digits_sequence_generator/data/compressed/*
-include digits_sequence_generator/config/config.yml
+include handwritten_number_generator/data/compressed/*
+include handwritten_number_generator/config/config.yml

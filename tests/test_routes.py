@@ -1,4 +1,4 @@
-from digits_sequence_generator import api_controller
+from handwritten_number_generator import api_controller
 
 
 def test_health():

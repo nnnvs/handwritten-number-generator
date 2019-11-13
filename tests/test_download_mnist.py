@@ -1,8 +1,8 @@
-from digits_sequence_generator.data_handler import download_mnist
-from digits_sequence_generator.data_handler import pre_processing
+from handwritten_number_generator.data_handler import download_mnist
+from handwritten_number_generator.data_handler import pre_processing
 import numpy as np
 import os
-from digits_sequence_generator.generator.util import Util
+from handwritten_number_generator.generator.util import Util
 
 
 def test_confirm_downloaded_files():

@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy as np
 import os
-from digits_sequence_generator import generator
+from handwritten_number_generator import generator
 
 # third party usage example. Generates 42
 

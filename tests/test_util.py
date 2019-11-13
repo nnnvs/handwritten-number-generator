@@ -1,4 +1,4 @@
-from digits_sequence_generator.generator.util import Util
+from handwritten_number_generator.generator.util import Util
 
 def test_read_config():
     utility = Util()

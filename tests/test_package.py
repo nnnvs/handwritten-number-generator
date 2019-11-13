@@ -1,4 +1,4 @@
-from digits_sequence_generator import generator
+from handwritten_number_generator import generator
 import pytest
 
 def test_generator_empty_variables():

@@ -5,7 +5,7 @@ def readme():
         return f.read()
 
 
-setup(name='digits_sequence_generator',
+setup(name='handwritten_number_generator',
       version='1.0.0',
       description='Generates images of the sequentially stacked augmented digits from MNIST data for training purposes.',
       long_description=readme(),
